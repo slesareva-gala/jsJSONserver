@@ -17,8 +17,6 @@ export const sortUsers = () => {
             name: 'children',
             value: isSort ? '' : '-'
         }).then(users => {
-            console.log('users: ', users);
-            console.log('isSort', isSort)
             render(users);
         });
 
