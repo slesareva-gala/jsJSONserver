@@ -15,7 +15,7 @@ export const sortUsers = () => {
 
         userService.getSortUsers({
             name: 'children',
-            value: isSort ? '' : '-'
+            value: isSort ? 'asc' : 'desc'
         }).then(users => {
             render(users);
         });

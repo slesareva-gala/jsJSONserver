@@ -52,11 +52,11 @@ export class UserService {
 
     // фильтрация
     filterUsers(filterOption) { return this.getData(`?${filterOption}=true`); }
-    // сортировка по новому формату: desk и ask не работают
-    getSortUsers(sortOption) { return this.getData(`\?_sort=${sortOption.value}${sortOption.name}`); }
-    // поиск _like уже не работает
-    // getSearchUsers(str) { return this.getData(`?name_like=${str}`); }
-    getSearchUsers(str) { return this.getData(`?name=${str}`); }
+    // сортировка 
+    getSortUsers(sortOption) { return this.getData(`?_sort=${sortOption.name}&_order=${sortOption.value}`); }
+    // поиск 
+    getSearchUsers(str) { return this.getData(`?name_like=${str}`); }
+
 
 
     // добалвение нового (id в ответе сервера)
